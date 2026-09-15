@@ -1,0 +1,23 @@
+# Vector database
+chromadb==1.0.20
+
+# Embeddings
+sentence-transformers==5.1.0
+
+# AI / OpenAI-compatible API clients
+openai==1.106.1
+
+# API backend
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+
+# Document handling
+markdown==3.8.2
+python-frontmatter==1.1.0
+
+# Text processing
+langchain-text-splitters==0.3.11
+
+# Utilities
+python-dotenv==1.1.1
+pydantic

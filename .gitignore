@@ -10,6 +10,7 @@ __pycache__/
 .venv/
 venv/
 .env
+chroma_db/
 
 # Node
 node_modules/
