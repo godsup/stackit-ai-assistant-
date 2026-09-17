@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stackit-ai-backend
+  labels:
+    app: stackit-ai-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stackit-ai-backend
+  template:
+    metadata:
+      labels:
+        app: stackit-ai-backend
+    spec:
+      containers:
+        - name: backend
+          image: ghcr.io/<github-username>/stackit-ai-backend:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+          env:
+            - name: GEMINI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: stackit-ai-secrets
+                  key: GEMINI_API_KEY
+            - name: GEMINI_MODEL
+              value: gemini-2.0-flash
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 20
+            periodSeconds: 20

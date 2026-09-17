@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.git/
+.gitignore
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db
+node_modules/
+dist/
+build/
+coverage/
+*.sqlite3
+
+# Keep project docs and source; avoid baking local dev data
+chroma_db/

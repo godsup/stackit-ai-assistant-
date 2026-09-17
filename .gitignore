@@ -5,23 +5,27 @@ Thumbs.db
 # Python
 __pycache__/
 *.py[cod]
+*.pyc
 *.pyo
 *.pyd
 .venv/
 venv/
 .env
+.env.*
 chroma_db/
+backend/chroma_db/
 
 # Node
-node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
 .npm/
 .next/
 out/
-dist/
+
+# Build artifacts
+*.log
 
 # IDE
 .vscode/
 .idea/
-
-# Logs
-*.log
