@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ghcr.io/<github-username>/stackit-ai-frontend:latest
+          image: ghcr.io/godsup/stackit-ai-frontend:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80

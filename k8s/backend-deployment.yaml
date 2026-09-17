@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ghcr.io/<github-username>/stackit-ai-backend:latest
+          image: ghcr.io/godsup/stackit-ai-backend:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
